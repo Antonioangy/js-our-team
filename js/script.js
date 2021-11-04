@@ -46,7 +46,7 @@ let container = document.querySelector('.team-container');
 let image = document.getElementById("image").value
 let name = document.getElementById("name").value
 let role = document.getElementById("role").value
-console.log(name)
+console.log(name);
 
 // creo un ciclo che aggiunge automaticamente i membri
 for (let i = 0; i<utenti.length; i++){
@@ -60,8 +60,9 @@ for (let i = 0; i<utenti.length; i++){
         >
         </div>
         <div class="card-text">
-        <h3>${utenti[0].name}</h3>
-        <p>${utenti[i].ruolo}</p>
+        <h3>${utenti[i].name}</h3>
+        <p>${utenti[i].role}</p>
         </div>
     </div>`;
 }
+

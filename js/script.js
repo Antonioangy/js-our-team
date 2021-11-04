@@ -6,43 +6,62 @@
 // array membri
 const utenti = [
     {
-        image: 
+        image: "img/wayne-barnett-founder-ceo.jpg",
         name: "Wayne Barnett",
-        role: "Founder & CEO",
+        role: "Founder & CEO"
     },
     
     {
-        image: ;
+        image: "img/angela-caroll-chief-editor.jpg",
         name: "Angela Caroll",
-        role: "Chief Editor",
+        role: "Chief Editor"
     } ,
     {
-        image: ;
+        image: "img/walter-gordon-office-manager.jpg",
         name: "Walter Gordon",
-        role: "Office Manager",
+        role: "Office Manager"
     },
     {
-        image: ;
+        image: "img/angela-lopez-social-media-manager.jpg",
         name: "Angela Lopez",
         role: "Social Media Manager",
     },
     {
-        image: ;
+        image: "img/scott-estrada-developer.jpg",
         name: "Scott Estrada",
-        role: "Developer",
+        role: "Developer"
     },
     {
-        image: ;
+        image: "img/barbara-ramos-graphic-designer.jpg",
         name: "Barbara Ramos",
-        role: "Graphic Designer",
+        role: "Graphic Designer"
     }
 ]
 
 console.log(utenti)
+
+let container = document.querySelector('.team-container');
+
 
 let image = document.getElementById("image").value
 let name = document.getElementById("name").value
 let role = document.getElementById("role").value
 console.log(name)
 
+// creo un ciclo che aggiunge automaticamente i membri
+for (let i = 0; i<utenti.length; i++){
 
+    container.innerHTML += `
+    <div class="team-card">
+        <div class="card-image">
+        <img
+            src="${utenti[i].image}"
+            alt="Wayne Barnett"
+        >
+        </div>
+        <div class="card-text">
+        <h3>${utenti[0].name}</h3>
+        <p>${utenti[i].ruolo}</p>
+        </div>
+    </div>`;
+}
